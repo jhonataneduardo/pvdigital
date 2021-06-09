@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'knox',
     'accounts',
-    'socialschool',
+    'company',
 ]
 
 MIDDLEWARE = [

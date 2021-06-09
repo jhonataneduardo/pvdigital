@@ -9,7 +9,10 @@ urlpatterns = [
         admin.site.urls),
     path(
         'api/v1/',
-        include('accounts.urls')),
+        include('accounts.urls'), name='account_url'),
+    path(
+        'api/v1/',
+        include('company.urls'), name='company_url'),
 ]
 
 if settings.DEBUG:

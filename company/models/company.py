@@ -16,7 +16,7 @@ class Company(models.Model):
     corporate_function = models.CharField(
         max_length=9,
         choices=CORPORATE_FUNCION_CHOICES,
-        default='primary'
+        blank=True
     )
     corporate_name = models.CharField(
         max_length=120
