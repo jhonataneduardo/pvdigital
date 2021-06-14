@@ -7,7 +7,9 @@ class CourseCategory(models.Model):
     name = models.CharField(
         max_length=80
     )
-    description = models.TextField()
+    description = models.TextField(
+        blank=True
+    )
 
     def __str__(self):
         self.name
@@ -30,7 +32,8 @@ class Course(models.Model):
         null=True
     )
     vacancies = models.IntegerField(
-        blank=True
+        blank=True,
+        null=True
     )
     teacher = models.ForeignKey(
         Teacher,
@@ -41,4 +44,4 @@ class Course(models.Model):
     )
 
     def __str__(self):
-        self.name
+        return self.name

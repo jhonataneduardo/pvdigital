@@ -25,6 +25,9 @@ class GroupConfig(models.Model):
         blank=True
     )
 
+    def __str__(self):
+        return self.type_vacancies
+
 
 class Group(models.Model):
     name = models.CharField(
@@ -42,10 +45,15 @@ class Group(models.Model):
         blank=True,
         null=True
     )
-    description = models.TextField()
+    description = models.TextField(
+        blank=True
+    )
     group_config = models.ForeignKey(
         GroupConfig,
         on_delete=models.SET_NULL,
         blank=True,
         null=True
     )
+
+    def __str__(self):
+        return self.name

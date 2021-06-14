@@ -11,7 +11,7 @@ class ProfileAdmin(admin.ModelAdmin):
 
 @admin.register(Employee)
 class EmployeeAdmin(admin.ModelAdmin):
-    list_display = ['name', 'company', 'type']
+    list_display = ['profile', 'company', 'type']
 
 
 @admin.register(Andress)

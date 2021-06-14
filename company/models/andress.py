@@ -36,4 +36,4 @@ class Andress(models.Model):
     )
 
     def __str__(self):
-        return f'{self.street}, {self.number}'
+        return f'({self.type}) {self.street}, {self.number}'

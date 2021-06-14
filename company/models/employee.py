@@ -37,5 +37,5 @@ class Employee(models.Model):
         null=True
     )
 
-    def __srt__(self):
+    def __str__(self):
         return self.profile.first_name
