@@ -1,10 +1,10 @@
-from django.db import models
 from rest_framework import serializers
 from company.models.employee import Employee
-from accounts.models.profile import Profile
+from company.serializers.andress import AndressSerializer
 
 
 class EmployeeSerializer(serializers.ModelSerializer):
+    andresses = AndressSerializer(many=True)
 
     class Meta:
         model = Employee
