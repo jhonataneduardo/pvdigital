@@ -77,16 +77,6 @@ WSGI_APPLICATION = 'setup.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {'default': env.db('DATABASE_URL')}
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'pvdigital',
-#         'USER': 'django',
-#         'PASSWORD': '123',
-#         'HOST': 'localhost',
-#         'PORT': '5432'
-#     }
-# }
 
 
 # Password validation
