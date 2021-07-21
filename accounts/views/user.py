@@ -2,7 +2,7 @@ from rest_framework import permissions, generics
 from rest_framework.response import Response
 from knox.models import AuthToken
 
-from accounts.serializers.user import ListCreateUserSerializer
+from accounts.serializers.user import ListCreateUserSerializer, UserSerializer
 from accounts.models.user import User
 
 
@@ -30,3 +30,12 @@ class UserRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [permissions.IsAuthenticated]
     queryset = User.objects.all()
     serializer_class = ListCreateUserSerializer
+
+
+class UserMe(generics.ListAPIView):
+    permission_classes = [permissions.IsAuthenticated]
+    serializer_class = UserSerializer
+
+    def get_queryset(self):
+        user = self.request.user
+        return User.objects.filter(id=user.id)

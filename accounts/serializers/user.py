@@ -2,7 +2,6 @@ from django.contrib.auth.hashers import make_password
 from rest_framework import serializers
 
 from accounts.models.user import User
-from accounts.models.profile import Profile
 
 
 class ListCreateUserSerializer(serializers.ModelSerializer):
@@ -24,9 +23,6 @@ class ListCreateUserSerializer(serializers.ModelSerializer):
             password=validated_data['password'],
             username=username,
         )
-        profile = Profile(first_name=validated_data['first_name'])
-        profile.user = user
-        profile.save()
         return user
 
 
