@@ -56,7 +56,7 @@ class Person(models.Model):
     )
     photo = models.ImageField(
         verbose_name=_("Photo"),
-        upload_to='users/%Y/%m/%d/',
+        upload_to='persons/%Y/%m/%d/',
         blank=True,
         null=True
     )
