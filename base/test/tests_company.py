@@ -8,7 +8,11 @@ class CompanyTestCase(APITestCase):
 
     def teste_POST_company(self):
         url = reverse('list_create_company')
-        data = {}
+        data = {
+            "corporate_name": "TestCase",
+            "fantasy_name": "TestCase",
+            "cnpj": "12345612345612"
+        }
         response = self.client.post(url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 

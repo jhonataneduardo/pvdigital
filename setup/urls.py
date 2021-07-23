@@ -9,11 +9,6 @@ from knox import views as knox_views
 from accounts.views.user import UserListCreateAPIView, UserRetrieveUpdateDestroyAPIView, UserMe
 from accounts.views.auth import LoginAPI
 
-from base.views.company import CompanyViewSet
-
-router = routers.DefaultRouter()
-router.register('companies', CompanyViewSet)
-
 urlpatterns = [
     path('', index),
     path('admin/', admin.site.urls),
@@ -26,6 +21,5 @@ urlpatterns = [
          name='list_create_user'),
     path('api/v1/auth/users/<int:pk>/', UserRetrieveUpdateDestroyAPIView.as_view(),
          name='get_update_delete_user'),
-    path('api/v1/', include(router.urls)),
     path('api/', include('base.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

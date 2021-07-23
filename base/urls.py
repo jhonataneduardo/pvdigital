@@ -1,10 +1,10 @@
-from django.urls import path, include
-from base.views.person import (
-    PersonListCreateAPIView, PersonRetrieveUpdateDestroyAPIView
-)
-
+from django.urls import path
+from base.views.person import PersonListCreateAPIView, PersonRetrieveUpdateDestroyAPIView
+from base.views.company import CompanyListCreateAPIView, CompanyRetrieveUpdateDestroyAPIView
 
 urlpatterns = [
     path('v1/persons/', PersonListCreateAPIView.as_view(), name='list_create_person'),
     path('v1/persons/<int:pk>/', PersonRetrieveUpdateDestroyAPIView.as_view(), name='get_update_delete_person'),
+    path('v1/companies/', CompanyListCreateAPIView.as_view(), name='list_create_company'),
+    path('v1/companies/<int:pk>/', CompanyRetrieveUpdateDestroyAPIView.as_view(), name='get_update_delete_company'),
 ]
