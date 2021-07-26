@@ -4,7 +4,6 @@ from rest_framework.test import APITestCase
 
 from school.models.teacher import Teacher
 from school.models.group import Group
-from school.models.course import Course
 from school.models.student import Student
 
 from base.models.andress import Andress
@@ -53,19 +52,7 @@ class StudentCreateTest:
             teacher=self.teacher,
             description="TestCase description"
         )
-        self.course = Course.objects.create(
-            name='TestCase name',
-            group=self.group,
-            teacher=self.teacher
-        )
-        self.course2 = Course.objects.create(
-            name='TestCase name 2',
-            group=self.group,
-            teacher=self.teacher
-        )
         self.student = Student.objects.create(person=self.person1)
-        self.student.courses.add(self.course)
-        self.student.save()
 
 
 class StudentTestCase(StudentCreateTest, APITestCase):
@@ -73,8 +60,7 @@ class StudentTestCase(StudentCreateTest, APITestCase):
         """ Test API POST Student"""
         url = reverse('list_create_student')
         data = {
-            'person': self.person2.id,
-            'courses': [self.course.id]
+            'person': self.person2.id
         }
         response = self.client.post(url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -95,8 +81,7 @@ class StudentTestCase(StudentCreateTest, APITestCase):
         """ Test API UPDATE Student"""
         url = reverse('get_update_delete_student', args=[self.student.id])
         data = {
-            'person': self.person2.id,
-            'courses': [self.course2.id]
+            'person': self.person2.id
         }
         response = self.client.put(url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
