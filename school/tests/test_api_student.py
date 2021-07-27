@@ -60,7 +60,19 @@ class StudentTestCase(StudentCreateTest, APITestCase):
         """ Test API POST Student"""
         url = reverse('list_create_student')
         data = {
-            'person': self.person2.id
+            'person': {
+                'first_name': 'First Name TestCase',
+                'last_name': 'Last Name TestCase',
+                'date_of_birth': '1991-07-13',
+                'gender': 'm',
+                'type': 'voluntary',
+                'cpf': '1234958',
+                'andress': {
+                    'type': 'residential',
+                    'street': 'Street TestCase',
+            },
+            'company': self.company.id
+            }
         }
         response = self.client.post(url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -81,7 +93,19 @@ class StudentTestCase(StudentCreateTest, APITestCase):
         """ Test API UPDATE Student"""
         url = reverse('get_update_delete_student', args=[self.student.id])
         data = {
-            'person': self.person2.id
+            'person': {
+                'first_name': 'First Name TestCase 2',
+                'last_name': 'Last Name TestCase 2',
+                'date_of_birth': '1991-07-13',
+                'gender': 'm',
+                'type': 'voluntary',
+                'cpf': '1234951',
+                'andress': {
+                    'type': 'residential',
+                    'street': 'Street TestCase 2',
+            },
+            'company': self.company.id
+            }
         }
         response = self.client.put(url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
