@@ -4,6 +4,11 @@ from school.models.teacher import Teacher
 
 
 class Group(models.Model):
+    name = models.CharField(
+        verbose_name=_('Name'),
+        max_length=80,
+        blank=True
+    )
     teacher = models.ForeignKey(
         Teacher,
         verbose_name=_('Teacher'),
@@ -15,4 +20,4 @@ class Group(models.Model):
     )
 
     def __str__(self):
-        return self.teacher.person.first_name
+        return self.name

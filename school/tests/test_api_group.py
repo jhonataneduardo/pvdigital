@@ -50,6 +50,7 @@ class GroupCreateTest:
             about="TestCase about"
         )
         self.group = Group.objects.create(
+            name="TestCase name",
             teacher=self.teacher1,
             description="TestCase description"
         )
@@ -60,6 +61,7 @@ class GroupTestCase(GroupCreateTest, APITestCase):
         """ Test API POST Group"""
         url = reverse('list_create_group')
         data = {
+            'name': 'TestCase name',
             'teacher': self.teacher2.id,
             'description': 'TestCase description'
         }
@@ -83,6 +85,7 @@ class GroupTestCase(GroupCreateTest, APITestCase):
         url = reverse('get_update_delete_group', args=[self.group.id])
         data = {
             'id': self.group.id,
+            'name': 'TestCase name 2',
             'teacher': self.teacher1.id,
             'description': 'TestCase description'
         }
