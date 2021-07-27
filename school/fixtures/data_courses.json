@@ -1,0 +1,29 @@
+[
+  {
+    "model": "school.course",
+    "pk": 1,
+    "fields": {
+      "name": "Curso de Informática",
+      "group": 2,
+      "teacher": 1
+    }
+  },
+  {
+    "model": "school.course",
+    "pk": 2,
+    "fields": {
+      "name": "Curso de Violão",
+      "group": 1,
+      "teacher": 2
+    }
+  },
+  {
+    "model": "school.course",
+    "pk": 3,
+    "fields": {
+      "name": "Curso de música",
+      "group": 1,
+      "teacher": 2
+    }
+  }
+]

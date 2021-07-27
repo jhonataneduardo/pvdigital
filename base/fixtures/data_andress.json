@@ -1,0 +1,87 @@
+[
+  {
+    "model": "base.andress",
+    "pk": 1,
+    "fields": {
+      "type": "residential",
+      "zip_code": "64090831",
+      "street": "Rua Espírito Santo",
+      "number": "7861",
+      "complement": "Galpão 10",
+      "district": "Industrial",
+      "city": "São Luíz",
+      "state": "Maranhão",
+      "country": "Brasil",
+      "created_date": "2021-07-21T09:51:10.511069-03:00",
+      "updated_date": "2021-07-21T09:51:10.511102-03:00"
+    }
+  },
+  {
+    "model": "base.andress",
+    "pk": 2,
+    "fields": {
+      "type": "residential",
+      "zip_code": "68906641",
+      "street": "Rua Pastor Otoniel Alencar",
+      "number": "870",
+      "complement": "Casas aos fundos",
+      "district": "Alvorada",
+      "city": "Macapá",
+      "state": "Amapá",
+      "country": "Brasil",
+      "created_date": "2021-07-21T09:51:10.511069-03:00",
+      "updated_date": "2021-07-21T09:51:10.511102-03:00"
+    }
+  },
+  {
+    "model": "base.andress",
+    "pk": 3,
+    "fields": {
+      "type": "residential",
+      "zip_code": "89227196",
+      "street": "Rua Presidente Heuse",
+      "number": "698",
+      "complement": "Casas aos fundos",
+      "district": "Iririú",
+      "city": "Joinville",
+      "state": "Santa Catarina",
+      "country": "Brasil",
+      "created_date": "2021-07-21T09:51:10.511069-03:00",
+      "updated_date": "2021-07-21T09:51:10.511102-03:00"
+    }
+  },
+  {
+    "model": "base.andress",
+    "pk": 4,
+    "fields": {
+      "type": "residential",
+      "zip_code": "64012855",
+      "street": "Rua Quatorze",
+      "number": "937",
+      "complement": "Casas aos fundos",
+      "district": "Santa Maria da Codipe",
+      "city": "Teresina",
+      "state": "Piauí",
+      "country": "Brasil",
+      "created_date": "2021-07-21T09:51:10.511069-03:00",
+      "updated_date": "2021-07-21T09:51:10.511102-03:00"
+    }
+  },
+  {
+    "model": "base.andress",
+    "pk": 5,
+    "fields": {
+      "type": "residential",
+      "zip_code": "76873684",
+      "street": "Rua José Mauro Vasconcelos",
+      "number": "425",
+      "complement": "Casas aos fundos",
+      "district": "Setor 06",
+      "city": "Ariquemes",
+      "state": "Rondônia",
+      "country": "Brasil",
+      "created_date": "2021-07-21T09:51:10.511069-03:00",
+      "updated_date": "2021-07-21T09:51:10.511102-03:00"
+    }
+  }
+]

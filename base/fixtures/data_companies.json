@@ -1,0 +1,43 @@
+[
+  {
+    "model": "base.company",
+    "pk": 1,
+    "fields": {
+      "corporate_function": "primary",
+      "corporate_name": "Vida Promoção Social",
+      "fantasy_name": "Projeto Vida",
+      "cnpj": "39547846000181",
+      "im": "7645575223",
+      "created_date": "2021-07-21T09:51:10.511069-03:00",
+      "updated_date": "2021-07-21T09:51:10.511102-03:00"
+    }
+  },
+  {
+    "model": "base.company",
+    "pk": 2,
+    "fields": {
+      "parent_company": 1,
+      "corporate_function": "secundary",
+      "corporate_name": "Vida Promoção Social",
+      "fantasy_name": "Projeto Vida Almirante Tamandaré",
+      "cnpj": "06492366000101",
+      "im": "8426653703",
+      "created_date": "2021-07-21T09:51:10.511069-03:00",
+      "updated_date": "2021-07-21T09:51:10.511102-03:00"
+    }
+  },
+  {
+    "model": "base.company",
+    "pk": 3,
+    "fields": {
+      "parent_company": 1,
+      "corporate_function": "primary",
+      "corporate_name": "Associação Batista de Ação Social de Curitiba",
+      "fantasy_name": "ABASC",
+      "cnpj": "06961483000177",
+      "im": "1846215090",
+      "created_date": "2021-07-21T09:51:10.511069-03:00",
+      "updated_date": "2021-07-21T09:51:10.511102-03:00"
+    }
+  }
+]

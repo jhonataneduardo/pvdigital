@@ -1,0 +1,26 @@
+[
+  {
+    "model": "school.teacher",
+    "pk": 1,
+    "fields": {
+      "person": 6,
+      "about": "Descrição de exemplo do professor 1"
+    }
+  },
+  {
+    "model": "school.teacher",
+    "pk": 2,
+    "fields": {
+      "person": 7,
+      "about": "Descrição de exemplo do professor 2"
+    }
+  },
+  {
+    "model": "school.teacher",
+    "pk": 3,
+    "fields": {
+      "person": 8,
+      "about": "Descrição de exemplo do professor 3"
+    }
+  }
+]

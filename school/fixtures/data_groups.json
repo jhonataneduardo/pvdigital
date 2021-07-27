@@ -1,0 +1,26 @@
+[
+  {
+    "model": "school.group",
+    "pk": 1,
+    "fields": {
+      "teacher": 1,
+      "description": "Descrição de exemplo do curso 1"
+    }
+  },
+  {
+    "model": "school.group",
+    "pk": 2,
+    "fields": {
+      "teacher": 2,
+      "description": "Descrição de exemplo do curso 2"
+    }
+  },
+  {
+    "model": "school.group",
+    "pk": 3,
+    "fields": {
+      "teacher": 3,
+      "description": "Descrição de exemplo do curso 3"
+    }
+  }
+]

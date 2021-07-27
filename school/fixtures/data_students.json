@@ -1,0 +1,38 @@
+[
+    {
+      "model": "school.student",
+      "pk": 1,
+      "fields": {
+        "person": 1
+      }
+    },
+    {
+      "model": "school.student",
+      "pk": 2,
+      "fields": {
+        "person": 2
+      }
+    },
+    {
+      "model": "school.student",
+      "pk": 3,
+      "fields": {
+        "person": 3
+      }
+    },
+    {
+      "model": "school.student",
+      "pk": 4,
+      "fields": {
+        "person": 4
+      }
+    },
+    {
+      "model": "school.student",
+      "pk": 5,
+      "fields": {
+        "person": 5
+      }
+    }
+  ]
+  
