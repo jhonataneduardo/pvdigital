@@ -27,10 +27,8 @@ class CourseCreateTest:
             last_name="Last Name TestCase",
             date_of_birth="1991-07-13",
             gender="m",
-            type="voluntary",
             cpf="1234568",
-            andress=self.andress,
-            company=self.company
+            andress=self.andress
         )
         self.teacher = Teacher.objects.create(
             person=self.person,

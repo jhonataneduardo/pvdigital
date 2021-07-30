@@ -11,6 +11,11 @@ class PersonSerializer(serializers.ModelSerializer):
     class Meta:
         model = Person
         fields = '__all__'
+        extra_kwargs = {
+            'cpf': {
+                'validators': [],
+            }
+        }
 
     def update(self, instance, validated_data):
         andress = validated_data.pop('andress', None)
@@ -23,9 +28,14 @@ class PersonSerializer(serializers.ModelSerializer):
         return super(PersonSerializer, self).update(instance, validated_data)
 
     def create(self, validated_data):
+        exist_cpf = Person.objects.filter(cpf=validated_data['cpf']).exists()
+        if exist_cpf:
+            raise serializers.ValidationError("Número de CPF já existe.")
+            
         andress = validated_data.pop('andress', None)
         if andress:
             andress = Andress.objects.create(**andress)
+
         instance = Person.objects.create(**validated_data)
         instance.andress = andress
         instance.save()

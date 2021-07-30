@@ -1,19 +1,10 @@
 from django.db import models
-from django.db.models.signals import post_save
-from django.dispatch import receiver
 from django.utils.translation import gettext as _
 from django.contrib.auth import get_user_model
-from base.models.company import Company
 from base.models.andress import Andress
 
 User = get_user_model()
 
-LIST_TYPE = [
-    ('employee', _('Employee')),
-    ('voluntary', _('Voluntary')),
-    ('teacher', _('Teacher')),
-    ('student', _('Student')),  
-]
 
 class Person(models.Model):
     user = models.OneToOneField(
@@ -42,17 +33,6 @@ class Person(models.Model):
         max_length=20,
         choices=[('m', _("Male")), ('f', _("Female"))],
         default="m"
-    )
-    company = models.ForeignKey(
-        Company,
-        on_delete=models.SET_NULL,
-        blank=True,
-        null=True
-    )
-    type = models.CharField(
-        max_length=10,
-        choices=LIST_TYPE,
-        blank=True
     )
     photo = models.ImageField(
         verbose_name=_("Photo"),

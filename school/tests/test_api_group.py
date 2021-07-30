@@ -26,20 +26,16 @@ class GroupCreateTest:
             last_name="Last Name TestCase",
             date_of_birth="1991-07-13",
             gender="m",
-            type="voluntary",
             cpf="1234568",
-            andress=self.andress,
-            company=self.company
+            andress=self.andress
         )
         self.person2 = Person.objects.create(
             first_name="First Name TestCase",
             last_name="Last Name TestCase",
             date_of_birth="1991-07-13",
             gender="m",
-            type="voluntary",
             cpf="789108",
-            andress=self.andress,
-            company=self.company
+            andress=self.andress
         )
         self.teacher1 = Teacher.objects.create(
             person=self.person1,

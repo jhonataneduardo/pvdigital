@@ -1,4 +1,3 @@
-from django.http import response
 from rest_framework.test import APITestCase
 from base.models.person import Person
 from django.urls import reverse
@@ -15,15 +14,22 @@ class PersonTestCase(APITestCase):
             "last_name": "Last Name TestCase",
             "date_of_birth": "1991-07-13",
             "gender": "m",
-            "type": "voluntary",
-            "cpf": "7878",
+            "cpf": "43806144095",
             "andress": {
-                "type": "residential",
-                "street": "Street TestCase",
+                'type': 'residential',
+                'zip_code': '81230162',
+                'street': 'Street TestCase',
+                'number': '123',
+                'complement': 'TestCase complement',
+                'district': 'TestCase distric',
+                'city': 'TestCase city',
+                'state': 'TestCase state',
+                'country': 'TestCase country'
             }
         }
         response = self.client.post(url, data, format='json')
-        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertEqual(
+            response.status_code, status.HTTP_201_CREATED, response.content.decode('utf8'))
 
     def test_list_person(self):
         """ Test LIST Person """

@@ -1,18 +1,17 @@
 from rest_framework import serializers
 
-from school.models.student import Student
-
-from base.models.person import Person
+from base.models.employee import Employee
 from base.models.andress import Andress
+from base.models.person import Person
 
 from base.serializers.person import PersonSerializer
 
 
-class StudentSerializer(serializers.ModelSerializer):
+class EmployeeSerializer(serializers.ModelSerializer):
     person = PersonSerializer()
-    
+
     class Meta:
-        model = Student
+        model = Employee
         fields = '__all__'
 
     def update(self, instance, validated_data):
@@ -37,9 +36,9 @@ class StudentSerializer(serializers.ModelSerializer):
 
         instance.person = obj_person
 
-        # update student
-        # for key, value in validated_data.items():
-        #     setattr(instance, key, value)
+        # update employee
+        for key, value in validated_data.items():
+            setattr(instance, key, value)
         instance.save()
 
         return instance
@@ -55,6 +54,6 @@ class StudentSerializer(serializers.ModelSerializer):
             person['andress'] = andress
             person = Person.objects.create(**person)
 
-        instance = Student.objects.create(**validated_data, person=person)
+        instance = Employee.objects.create(**validated_data, person=person)
 
         return instance

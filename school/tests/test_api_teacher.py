@@ -25,20 +25,16 @@ class TeacherCreateTest:
             last_name="Last Name TestCase",
             date_of_birth="1991-07-13",
             gender="m",
-            type="voluntary",
-            cpf="123456",
-            andress=self.andress,
-            company=self.company
+            cpf="67087947052",
+            andress=self.andress
         )
         self.person2 = Person.objects.create(
             first_name="First Name TestCase",
             last_name="Last Name TestCase",
             date_of_birth="1991-07-13",
             gender="m",
-            type="voluntary",
             cpf="78910",
-            andress=self.andress,
-            company=self.company
+            andress=self.andress
         )
         self.teacher1 = Teacher.objects.create(
             person=self.person1,
@@ -56,7 +52,6 @@ class TeacherTestCase(TeacherCreateTest, APITestCase):
                 'last_name': 'Last Name TestCase',
                 'date_of_birth': '1991-07-13',
                 'gender': "m",
-                'type': "voluntary",
                 'cpf': "585858",
                 'andress': {
                     'type': 'residential',
@@ -89,18 +84,23 @@ class TeacherTestCase(TeacherCreateTest, APITestCase):
                 'last_name': 'Last Name TestCase 2',
                 'date_of_birth': '1991-07-13',
                 'gender': "m",
-                'type': "voluntary",
-                'cpf': "58585885",
+                'cpf': "67087947052",
                 'andress': {
                     'type': 'residential',
-                    'street': 'Street TestCase 2',
-                },
-                'company': self.company.id
+                    'zip_code': '81230162',
+                    'street': 'Street TestCase',
+                    'number': '123',
+                    'complement': 'TestCase complement',
+                    'district': 'TestCase distric',
+                    'city': 'TestCase city',
+                    'state': 'TestCase state',
+                    'country': 'TestCase country'
+                }
             },
             'about': "TestCase Update 2"
         }
         response = self.client.put(url, data, format='json')
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.status_code, status.HTTP_200_OK, response.content.decode('utf8'))
 
     def test_teacher_delete(self):
         """ Test API DELETE Teacher """
