@@ -14,8 +14,8 @@ urlpatterns = [
     path('v1/companies/<int:pk>/', CompanyRetrieveUpdateDestroyAPIView.as_view(),
          name='get_update_delete_company'),
 
-    path('v1/employee/', EmployeeCreateAPIView.as_view(),
+    path('v1/employees/', EmployeeCreateAPIView.as_view(),
          name='list_create_employee'),
-    path('v1/employee/<int:pk>/', EmployeeRetrieveUpdateDestroyAPIView.as_view(),
+    path('v1/employees/<int:pk>/', EmployeeRetrieveUpdateDestroyAPIView.as_view(),
          name='get_update_delete_employee'),
 ]
