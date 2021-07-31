@@ -8,7 +8,6 @@
       "cpf": "65334028978",
       "date_of_birth": "1990-11-02",
       "gender": "m",
-      "company": 1,
       "andress": 1,
       "created_date": "2021-07-21T09:51:10.511069-03:00",
       "updated_date": "2021-07-21T09:51:10.511102-03:00"
@@ -23,7 +22,6 @@
       "cpf": "96242058928",
       "date_of_birth": "2001-11-06",
       "gender": "f",
-      "company": 1,
       "andress": 2,
       "created_date": "2021-07-21T09:51:10.511069-03:00",
       "updated_date": "2021-07-21T09:51:10.511102-03:00"
@@ -38,7 +36,6 @@
       "cpf": "26434848943",
       "date_of_birth": "1990-12-03",
       "gender": "m",
-      "company": 1,
       "andress": 3,
       "created_date": "2021-07-21T09:51:10.511069-03:00",
       "updated_date": "2021-07-21T09:51:10.511102-03:00"
@@ -53,7 +50,6 @@
       "cpf": "41542975972",
       "date_of_birth": "1990-12-07",
       "gender": "m",
-      "company": 2,
       "andress": 4,
       "created_date": "2021-07-21T09:51:10.511069-03:00",
       "updated_date": "2021-07-21T09:51:10.511102-03:00"
@@ -68,7 +64,6 @@
       "cpf": "72388708940",
       "date_of_birth": "1990-09-17",
       "gender": "m",
-      "company": 2,
       "andress": 5,
       "created_date": "2021-07-21T09:51:10.511069-03:00",
       "updated_date": "2021-07-21T09:51:10.511102-03:00"
@@ -83,7 +78,6 @@
       "cpf": "51599750635",
       "date_of_birth": "1986-01-04",
       "gender": "f",
-      "company": 1,
       "created_date": "2021-07-21T09:51:10.511069-03:00",
       "updated_date": "2021-07-21T09:51:10.511102-03:00"
     }
@@ -97,7 +91,6 @@
       "cpf": "72894507879",
       "date_of_birth": "1954-05-14",
       "gender": "f",
-      "company": 1,
       "created_date": "2021-07-21T09:51:10.511069-03:00",
       "updated_date": "2021-07-21T09:51:10.511102-03:00"
     }
@@ -111,7 +104,45 @@
       "cpf": "44449759206",
       "date_of_birth": "1945-01-23",
       "gender": "m",
-      "company": 1,
+      "created_date": "2021-07-21T09:51:10.511069-03:00",
+      "updated_date": "2021-07-21T09:51:10.511102-03:00"
+    }
+  },
+  {
+    "model": "base.person",
+    "pk": 9,
+    "fields": {
+      "first_name": "Alessandra",
+      "last_name": "Pietra Tatiane Pinto",
+      "cpf": "23626784908",
+      "date_of_birth": "1997-08-23",
+      "gender": "f",
+      "created_date": "2021-07-21T09:51:10.511069-03:00",
+      "updated_date": "2021-07-21T09:51:10.511102-03:00"
+    }
+  },
+  {
+    "model": "base.person",
+    "pk": 10,
+    "fields": {
+      "first_name": "Caroline",
+      "last_name": "Tatiane dos Santos",
+      "cpf": "37977925907",
+      "date_of_birth": "2002-05-26",
+      "gender": "f",
+      "created_date": "2021-07-21T09:51:10.511069-03:00",
+      "updated_date": "2021-07-21T09:51:10.511102-03:00"
+    }
+  },
+  {
+    "model": "base.person",
+    "pk": 11,
+    "fields": {
+      "first_name": "Lavínia",
+      "last_name": "Laura Sophie Moraes",
+      "cpf": "48624263956",
+      "date_of_birth": "2002-09-03",
+      "gender": "f",
       "created_date": "2021-07-21T09:51:10.511069-03:00",
       "updated_date": "2021-07-21T09:51:10.511102-03:00"
     }

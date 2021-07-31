@@ -1,0 +1,74 @@
+[
+  {
+    "model": "base.employee",
+    "pk": 1,
+    "fields": {
+      "person": 1,
+      "company": 1,
+      "type": "voluntary"
+    }
+  },
+  {
+    "model": "base.employee",
+    "pk": 2,
+    "fields": {
+      "person": 2,
+      "company": 1,
+      "type": "voluntary"
+    }
+  },
+  {
+    "model": "base.employee",
+    "pk": 3,
+    "fields": {
+      "person": 3,
+      "company": 2,
+      "type": "employee"
+    }
+  },
+  {
+    "model": "base.employee",
+    "pk": 4,
+    "fields": {
+      "person": 4,
+      "company": 2,
+      "type": "employee"
+    }
+  },
+  {
+    "model": "base.employee",
+    "pk": 5,
+    "fields": {
+      "person": 5,
+      "company": 2,
+      "type": "employee"
+    }
+  },
+  {
+    "model": "base.employee",
+    "pk": 6,
+    "fields": {
+      "person": 6,
+      "company": 1,
+      "type": "employee"
+    }
+  },
+  {
+    "model": "base.employee",
+    "pk": 7,
+    "fields": {
+      "person": 7,
+      "company": 1,
+      "type": "employee"
+    }
+  },
+  {
+    "model": "base.employee",
+    "pk": 7,
+    "fields": {
+      "person": 8,
+      "company": 1,
+      "type": "employee"
+    }
+  }
+]
